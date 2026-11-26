@@ -1,0 +1,16 @@
+# Gradle / IDE
+.gradle/
+build/
+.kotlin/
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Arquivo com o caminho do SDK e a chave da API (nunca vai para o Git)
+local.properties
+
+# Sistema
+.DS_Store
+Thumbs.db

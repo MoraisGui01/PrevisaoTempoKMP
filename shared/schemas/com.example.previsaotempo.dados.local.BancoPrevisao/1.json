@@ -1,0 +1,114 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "bc51854d212d47a26cca661b3c79ba14",
+    "entities": [
+      {
+        "tableName": "horario_previsao",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `chave` TEXT NOT NULL, `cidade` TEXT NOT NULL, `pais` TEXT NOT NULL, `dataHora` TEXT NOT NULL, `temperatura` REAL NOT NULL, `sensacao` REAL NOT NULL, `minima` REAL NOT NULL, `maxima` REAL NOT NULL, `umidade` INTEGER NOT NULL, `vento` REAL NOT NULL, `descricao` TEXT NOT NULL, `icone` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "chave",
+            "columnName": "chave",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cidade",
+            "columnName": "cidade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pais",
+            "columnName": "pais",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataHora",
+            "columnName": "dataHora",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "temperatura",
+            "columnName": "temperatura",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sensacao",
+            "columnName": "sensacao",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "minima",
+            "columnName": "minima",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxima",
+            "columnName": "maxima",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "umidade",
+            "columnName": "umidade",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vento",
+            "columnName": "vento",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descricao",
+            "columnName": "descricao",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "icone",
+            "columnName": "icone",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_horario_previsao_chave",
+            "unique": false,
+            "columnNames": [
+              "chave"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_horario_previsao_chave` ON `${TABLE_NAME}` (`chave`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'bc51854d212d47a26cca661b3c79ba14')"
+    ]
+  }
+}
